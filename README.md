@@ -11,15 +11,13 @@ Loading the page for the first time:
 
 ![title](./screenshots/first_load.png)
 
-
-Not submitting any form values:
-
-![title](./screenshots/empty_submission.png)
-
-
 Not submitting a math captcha value:
 
 ![title](./screenshots/empty_captcha.png)
+
+Submitting the wrong math captcha value:
+
+![title](./screenshots/incorrect_answer.png)
 
 If the submitted form and captcha are valid:
 
