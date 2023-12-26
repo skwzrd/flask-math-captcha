@@ -10,8 +10,8 @@ class MathCaptcha:
     def __init__(
         self,
         tff_file_path=None,
-        size=(90, 40),
-        font_size=25,
+        size=(80, 50),
+        font_size=40,
         font_color=ImageColor.getcolor("black", "RGB"),
         background_color=ImageColor.getcolor("white", "RGB"),
     ):
@@ -36,7 +36,7 @@ class MathCaptcha:
     def generate_image(self, text):
         img = Image.new("RGB", self.size, self.background_color)
         draw = ImageDraw.Draw(img)
-        xy = (7, 7)
+        xy = (5, 5)
         draw.text(xy, text, self.font_color, font=self.font)
 
         buffered = BytesIO()

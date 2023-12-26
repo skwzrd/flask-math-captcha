@@ -9,13 +9,13 @@ from captcha import MathCaptcha
 
 app = Flask(__name__)
 app.secret_key = "123456" # change me
-app.config["MATH-CAPTCHA-FONT"] = os.path.join(os.path.dirname(__file__), "../fonts/tly.ttf")
+app.config["MATH_CAPTCHA_FONT"] = os.path.join(os.path.dirname(__file__), "../fonts/tly.ttf")
 
 
 @app.route("/", methods=["GET", "POST"])
 def home():
     form = MyForm()
-    captcha = MathCaptcha(tff_file_path=app.config["MATH-CAPTCHA-FONT"])
+    captcha = MathCaptcha(tff_file_path=app.config["MATH_CAPTCHA_FONT"])
     message = None
 
     if form.validate_on_submit():
